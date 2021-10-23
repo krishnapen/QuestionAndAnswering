@@ -1,6 +1,7 @@
 package com.qna;
 
 import com.qna.answer.Answer;
+import com.qna.builder.QuestionAndAnswerBuilder;
 import com.qna.decorator.OptionA;
 import com.qna.decorator.OptionB;
 import com.qna.facade.QuestionAndAnswerFacade;
@@ -55,7 +56,9 @@ public class Main {
         
      // -------------------------------------------------------------------------------------
         
-        
+        QuestionAndAnswerBuilder builder = new QuestionAndAnswerBuilder();
+        builder.buildSoftware();
+        builder.buildHardware();
        
     }
 }
