@@ -3,6 +3,7 @@ package com.qna;
 import com.qna.answer.Answer;
 import com.qna.decorator.OptionA;
 import com.qna.decorator.OptionB;
+import com.qna.facade.QuestionAndAnswerFacade;
 import com.qna.factory.AbstractFactory;
 import com.qna.question.Question;
 
@@ -50,6 +51,11 @@ public class Main {
 
         soft.display();
         hard.display();
+        
+        
+     // -------------------------------------------------------------------------------------
+        
+        
        
     }
 }

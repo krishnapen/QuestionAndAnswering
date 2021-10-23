@@ -1,4 +1,4 @@
-package com.qna;
+package com.qna.facade;
 
 import com.qna.answer.Answer;
 import com.qna.decorator.OptionA;
