@@ -46,7 +46,7 @@ public class FactoryPatternTest {
 	public void test_null_answerFactory_createQuestion() {
 		System.out.println("Testing Create Question Method - AnswerFactory");
 		AnswerFactory answerfactory = new AnswerFactory();
-		assertNull(answerfactory.createQuestion(Question.QuestionType.HARDWARE,"",null));
+		assertNull(answerfactory.createQuestion(Question.QuestionType.HARDWARE,null,null));
 	}
 
 	@Test
@@ -58,9 +58,8 @@ public class FactoryPatternTest {
 
 	@Test
 	   public void test_notNull_answerFactory_createAnswer() {
-		Hardware s = new Hardware(null, null);
 	      System.out.println("Testing Create Answer Method for not null - AnswerFactory");
 			AnswerFactory answerfactory = new AnswerFactory();
-	      assertNotNull(answerfactory.createAnswer("Kymco Agility", Answer.AnswerType.COMMUNITYUSER));
+	      assertNotNull(answerfactory.createAnswer("Polymorphism in Java has two types they are Compile time polymorphism (static binding) and Runtime polymorphism (dynamic binding). Method overloading is an example of static polymorphism, while method overriding is an example of dynamic polymorphism. An important example of polymorphism is how a parent class refers to a child class object. In fact, any object that satisfies more than one IS-A relationship is polymorphic in nature.", Answer.AnswerType.COMMUNITYUSER));
 }
 }
