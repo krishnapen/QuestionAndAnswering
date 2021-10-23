@@ -34,19 +34,19 @@ public class Main {
         // -------------------------------------------------------------------------------------
 
        
-        QuestionAndAnswerFacade garage = new QuestionAndAnswerFacade();
+        QuestionAndAnswerFacade QnA = new QuestionAndAnswerFacade();
 
         // Question Creation
-        Question soft = garage.createAutomobile("Tesla CyberTruck", "", Answer.AnswerType.PROFESSOR);
-        Question hard = garage.createScooter("Kymco Agility", "", Answer.AnswerType.COMMUNITYUSER);
+        Question soft = QnA.createSoftware("How do you implement encapsulation?", "Hiding Internals & Provide access with getters & setters", Answer.AnswerType.PROFESSOR);
+        Question hard = QnA.createHardware("What is the power requirement for Raspberry Pi model B?", "The power requirement for Raspberry Pi model B is 700 mA", Answer.AnswerType.COMMUNITYUSER);
 
         // Display
         soft.display();
         hard.display();
 
         // Adding Options
-        soft = garage.addOptionB(soft);
-        hard = garage.addAllOptions(hard);
+        soft = QnA.addOptionB(soft);
+        hard = QnA.addAllOptions(hard);
 
         soft.display();
         hard.display();

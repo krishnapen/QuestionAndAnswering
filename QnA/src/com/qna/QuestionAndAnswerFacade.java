@@ -18,18 +18,18 @@ public class QuestionAndAnswerFacade {
         this.answerFactory = new AnswerFactory();
     }
 
-    public Question createAutomobile(String question, String answer, Answer.AnswerType type) {
-        Answer answe = this.answerFactory.createAnswer(answer, type);
-        Question software = this.answerFactory.createQuestion(Question.QuestionType.SOFTWARE, question, answe);
+    public Question createSoftware(String question, String answer, Answer.AnswerType type) {
+        Answer ans = this.answerFactory.createAnswer(answer, type);
+        Question ques = this.questionFactory.createQuestion(Question.QuestionType.SOFTWARE, question, ans);
 
-        return software;
+        return ques;
     }
 
-    public Question createScooter(String question, String answer, Answer.AnswerType type) {
-        Answer answe = this.answerFactory.createAnswer(answer, type);
-        Question hardware = this.questionFactory.createQuestion(Question.QuestionType.HARDWARE, question, answe);
+    public Question createHardware(String question, String answer, Answer.AnswerType type) {
+        Answer ans = this.answerFactory.createAnswer(answer, type);
+        Question ques = this.questionFactory.createQuestion(Question.QuestionType.HARDWARE, question, ans);
 
-        return hardware;
+        return ques;
     }
 
     public Question addOptionA(Question question) {
